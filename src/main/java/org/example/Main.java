@@ -28,6 +28,13 @@ public class Main {
                 phrases.add(new Phrase(id, phrase, authorName)); // 입력 받은 값 저장
 
                 System.out.printf("%d번 명언이 등록되었습니다\n", id); // 결과 출력
+                lastPhraseIndex = id;
+            } else if (command.equals("목록")) {
+                System.out.println("번호 / 작가 / 명언");
+                System.out.println("-".repeat(30));
+                for (int i = phrases.size() - 1; i >= 0; i--) {
+                    System.out.printf("%d / %s / %s\n", phrases.get(i).getId(), phrases.get(i).getAuthorName(), phrases.get(i).getPhrase());
+                }
             }
         }
     }
