@@ -23,7 +23,7 @@ public class Rq {
         for (String paramStr : paramBits) { // id=1, option2=a, option3=false
             String[] paramStrBits = paramStr.split("=", 2); // 이걸 =기준으로 분해
 
-            if (paramBits.length == 1) {
+            if (paramStr.length() == 1) {
                 continue; // break나 return 하지 않은 이유: &로 다른 명령어도 묶여 있기 때문
             }
 

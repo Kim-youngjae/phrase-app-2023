@@ -24,6 +24,8 @@ public class App {
                 phraseController.printList();
             } else if (rq.getActionCode().equals("삭제")) {
                 phraseController.remove(rq);
+            } else if (rq.getActionCode().equals("수정")) {
+                phraseController.update(rq);
             }
         }
     }
